@@ -12,11 +12,17 @@ public interface CalcultorService {
 
 	public Calculator subt(double value1, double value2);
 
-	public Calculator mplus(double currentNumber);
+	public void mplus(double currentNumber);
 
 	public Calculator mr();
 
 	public String mc();
+
+	public Calculator getDervi(double currentNumber);
+
+	public Calculator getPower(double currentNumber);
+
+	public Calculator getSqrroot(double currentNumber);
 
 
 }

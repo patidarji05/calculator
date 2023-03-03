@@ -73,10 +73,10 @@ public class CalculatorSeviceImpl implements CalcultorService{
 	}
 
 	@Override
-	public Calculator mplus(double currentNumber) {
+	public void mplus(double currentNumber) {
 		li.add(currentNumber);
 		System.out.println(li.toString());
-		return null;
+		
 	}
 
 	public Calculator mr() {
@@ -95,6 +95,30 @@ public class CalculatorSeviceImpl implements CalcultorService{
 		}
 		System.out.println(li.toString());
 		return "";
+	}
+
+	@Override
+	public Calculator getDervi(double currentNumber) {
+		Calculator c= new Calculator();
+		c.setResult(1/currentNumber);
+		logger.info("fatching data from dervi method ");
+		return c;
+	}
+
+	@Override
+	public Calculator getPower(double currentNumber) {
+		Calculator c= new Calculator();
+		c.setResult(currentNumber*currentNumber);
+		logger.info("fatching data from power method ");
+		return c;
+	}
+
+	@Override
+	public Calculator getSqrroot(double currentNumber) {
+		Calculator c= new Calculator();
+		c.setResult(Math.sqrt(currentNumber));
+		logger.info("fatching data from squre method ");
+		return c;
 	}
 
 
